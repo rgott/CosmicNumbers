@@ -1,0 +1,6 @@
+C:\Users\Rob\Source\Repos\CosmicNumbers\CountDifferent\bin\Debug\CountDifferent.exe.config
+C:\Users\Rob\Source\Repos\CosmicNumbers\CountDifferent\bin\Debug\CountDifferent.exe
+C:\Users\Rob\Source\Repos\CosmicNumbers\CountDifferent\bin\Debug\CountDifferent.pdb
+C:\Users\Rob\Source\Repos\CosmicNumbers\CountDifferent\obj\Debug\CountDifferent.csprojResolveAssemblyReference.cache
+C:\Users\Rob\Source\Repos\CosmicNumbers\CountDifferent\obj\Debug\CountDifferent.exe
+C:\Users\Rob\Source\Repos\CosmicNumbers\CountDifferent\obj\Debug\CountDifferent.pdb
