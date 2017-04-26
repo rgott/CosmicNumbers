@@ -7,7 +7,7 @@ namespace CountDifferent
         public static void Main()
         {
             CosmicGenerator c = new CosmicGenerator();
-            c.generator();
+            c.Generator();
         }
     }
 }
