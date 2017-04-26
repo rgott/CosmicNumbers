@@ -8,11 +8,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CountDifferent.Tests</RootNamespace>
     <AssemblyName>CountDifferent.Tests</AssemblyName>
-<<<<<<< HEAD
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
-=======
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
->>>>>>> refs/remotes/origin/master
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -20,10 +16,7 @@
     <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
     <IsCodedUITest>False</IsCodedUITest>
     <TestProjectType>UnitTest</TestProjectType>
-<<<<<<< HEAD
     <TargetFrameworkProfile />
-=======
->>>>>>> refs/remotes/origin/master
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -59,11 +52,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Include="CosmicGeneratorTest.cs" />
-=======
-    <Compile Include="UnitTest1.cs" />
->>>>>>> refs/remotes/origin/master
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

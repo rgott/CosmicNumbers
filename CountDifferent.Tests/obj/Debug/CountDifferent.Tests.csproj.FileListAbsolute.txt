@@ -7,3 +7,12 @@ C:\Users\Rob\Source\Repos\CosmicNumbers\CountDifferent.Tests\bin\Debug\Microsoft
 C:\Users\Rob\Source\Repos\CosmicNumbers\CountDifferent.Tests\obj\Debug\CountDifferent.Tests.csprojResolveAssemblyReference.cache
 C:\Users\Rob\Source\Repos\CosmicNumbers\CountDifferent.Tests\obj\Debug\CountDifferent.Tests.dll
 C:\Users\Rob\Source\Repos\CosmicNumbers\CountDifferent.Tests\obj\Debug\CountDifferent.Tests.pdb
+C:\Users\Rob\Source\GitHub\CosmicNumbers\CountDifferent.Tests\bin\Debug\CountDifferent.Tests.dll
+C:\Users\Rob\Source\GitHub\CosmicNumbers\CountDifferent.Tests\bin\Debug\CountDifferent.Tests.pdb
+C:\Users\Rob\Source\GitHub\CosmicNumbers\CountDifferent.Tests\bin\Debug\CountDifferent.exe
+C:\Users\Rob\Source\GitHub\CosmicNumbers\CountDifferent.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Rob\Source\GitHub\CosmicNumbers\CountDifferent.Tests\bin\Debug\CountDifferent.pdb
+C:\Users\Rob\Source\GitHub\CosmicNumbers\CountDifferent.Tests\bin\Debug\CountDifferent.exe.config
+C:\Users\Rob\Source\GitHub\CosmicNumbers\CountDifferent.Tests\obj\Debug\CountDifferent.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Rob\Source\GitHub\CosmicNumbers\CountDifferent.Tests\obj\Debug\CountDifferent.Tests.dll
+C:\Users\Rob\Source\GitHub\CosmicNumbers\CountDifferent.Tests\obj\Debug\CountDifferent.Tests.pdb
