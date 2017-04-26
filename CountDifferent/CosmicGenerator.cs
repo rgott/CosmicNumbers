@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 ﻿using Algorithm.Numerics;
 using System;
+=======
+﻿using System;
+>>>>>>> refs/remotes/origin/master
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -12,7 +16,65 @@ namespace CountDifferent
 {
     public class CosmicGenerator
     {
+<<<<<<< HEAD
         public void Generator(string LastGenerated = "Eleven")
+=======
+        static readonly Dictionary<string, int> lower = new Dictionary<string, int>() {
+             { "Zero",0 }
+            ,{ "One",1 }
+            ,{ "Two",2 }
+            ,{ "Three",3 }
+            ,{ "Four",4 }
+            ,{ "Five",5 }
+            ,{ "Six",6 }
+            ,{ "Seven",7 }
+            ,{ "Eight",8 }
+            ,{ "Nine",9 }
+            ,{ "Ten", 10 }
+            ,{ "Eleven", 11 }
+            ,{ "Twelve", 12 }
+            ,{ "Thirteen", 13 }
+            ,{ "Fourteen", 14 }
+            ,{ "Fifteen", 15 }
+            ,{ "Sixteen", 16 }
+            ,{ "Seventeen", 17 }
+            ,{ "Eighteen", 18 }
+            ,{ "Nineteen", 19 }
+            ,{ "Twenty",20 }
+            ,{ "Thirty",30 }
+            ,{ "Fourty",40 }
+            ,{ "Fifty",50 }
+            ,{ "Sixty",60 }
+            ,{ "Seventy",70 }
+            ,{ "Eighty",80 }
+            ,{ "Ninety",90 }};
+
+
+        static readonly Dictionary<string, int> higher = new Dictionary<string, int>(){
+             { "Hundred", 2 }// 7
+            ,{ "Thousand",3 }// 8
+            ,{ "Million",6 }// 7
+            ,{ "Billion",9 }// 7
+            ,{ "Trillion",12 }// 8
+            ,{ "Quadrillion",15 }// 11
+            ,{ "Quintillion",18 }// 11
+            ,{ "Sextillion",21 }// 10
+            ,{ "Septillion",24 }// 10
+            ,{ "Octillion",27 }// 9
+            ,{ "Nonillion",30 }// 9
+            ,{ "Decillion",33 }// 9
+            ,{ "Undecillion",36 }// 11
+            ,{ "Duodecillion",39 }// 12
+            ,{ "Tredecillion",42 }// 12
+            ,{ "Quattuordecillion",45 }// 17
+            ,{ "Quindecillion",48 }// 13
+            ,{ "Sexdecillion",51 }// 12
+            ,{ "Septendecillion",54 }// 15
+            ,{ "Octodecillion",57 }// 13
+            ,{ "Novemdecillion",60 }};// 14
+
+        public void generator(string LastGenerated = "Eleven")
+>>>>>>> refs/remotes/origin/master
         {
             using (var stream = File.AppendText("file.txt"))
             using (var stream2 = File.AppendText("file1.txt"))
@@ -25,6 +87,7 @@ namespace CountDifferent
 
                 while (true)
                 {
+<<<<<<< HEAD
                     Console.WriteLine("START LETTER");
                     var value = NumberToFindNumberWithLetters(NumberUtils.ConvertToNumber(LastGenerated));
                     stream2.WriteLine(value);
@@ -35,6 +98,14 @@ namespace CountDifferent
                     LastGenerated = NumberUtils.ConvertToWord(value);
                     stream.WriteLine(LastGenerated);
                     Console.WriteLine(LastGenerated);
+=======
+                    var value = NumberToFindNumberWithLetters(convertToNumber(LastGenerated));
+                    stream2.WriteLine(value);
+                    stream2.Flush();
+
+                    LastGenerated = convertToWord(value);
+                    stream.WriteLine(LastGenerated);
+>>>>>>> refs/remotes/origin/master
                     stream.Flush();
                 }
             }
@@ -184,7 +255,10 @@ namespace CountDifferent
             }
             #endregion
 
+<<<<<<< HEAD
             Console.WriteLine(last3.Count);
+=======
+>>>>>>> refs/remotes/origin/master
             while (last3.Count > 0)
             {
                 byte num = last3.Pop();
@@ -194,5 +268,88 @@ namespace CountDifferent
 
             return returns;
         }
+<<<<<<< HEAD
+=======
+
+
+        public static BigInteger convertToNumber(string Number, char splitOn = '-')
+        {
+            return convertToNumber(Number.Split(splitOn));
+        }
+
+        public static BigInteger convertToNumber(string[] NumberChunk)
+        {
+            BigInteger total = BigInteger.Zero;
+
+            int value;
+            BigInteger _sto = BigInteger.Zero;
+            for (int i = 0; i < NumberChunk.Length; i++)
+            {
+                if (lower.TryGetValue(NumberChunk[i], out value))
+                {
+                    // if here again then count number
+                    total += _sto;
+
+                    // here then number
+                    _sto = value;
+                }
+                else if (higher.TryGetValue(NumberChunk[i], out value))
+                {
+                    // multiply previous number
+                    var zeroHolder = BigInteger.Pow(new BigInteger(10), value);
+
+                    _sto = BigInteger.Multiply(zeroHolder, _sto);
+                }
+
+            }
+            total += _sto;
+            return total;
+        }
+
+        public static string convertToWord(BigInteger number)
+        {
+            if (number <= 19)
+            {
+                return lower.FirstOrDefault(n => n.Value == number).Key;
+            }
+            else
+            {
+                return RconvertToWord(number).TrimEnd('-');
+            }
+        }
+        private static string RconvertToWord(BigInteger number)
+        {
+            if(number == 0)
+            {
+                return "";
+            }
+            if(number <= 19)
+            {
+                return lower.FirstOrDefault(n => n.Value == number).Key + "-";
+            }
+            else if( number <= 99)
+            {
+                return lower.FirstOrDefault(n => n.Value == (number / 10 * 10)).Key + "-" + RconvertToWord(number % 10);
+            }
+            else if (number <= 999)
+            {
+                return RconvertToWord(number / 100) + higher.ElementAt(0).Key + "-" + RconvertToWord(number % 100);
+            }
+            else //if (number > 99 }
+            {
+                short size = (short)Math.Ceiling(number.ToString().Length / 3.0); // total number of segments 10,030,003 => 3 segments
+
+                // length of number minus the latter segments e.g. num 10,030,003 => 8("10,030,003" } - 6("030,003" } = 2
+                short firstSegmentSize = (short)(number.ToString().Length - (3 * (size - 1)));
+
+                string segment = number.ToString().Substring(0, firstSegmentSize); // get first segment
+                BigInteger numSegment = BigInteger.Parse(segment); // parse to int
+
+                BigInteger retSize = number - ((ulong)numSegment* (ulong)Math.Pow(10, 3*(size - 1)));
+                return RconvertToWord(numSegment) + higher.ElementAt(size - 1).Key + "-" + RconvertToWord(retSize);
+            }
+
+        }
+>>>>>>> refs/remotes/origin/master
     }
 }
